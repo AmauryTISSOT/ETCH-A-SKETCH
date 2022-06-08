@@ -1,5 +1,6 @@
 let numberOfRows = 16;
 let initialNumber = 0;
+let randomColor = '';
 
 // Function who create square divs
 
@@ -43,18 +44,29 @@ function chooseRow () {
 };
 
 
-// Function who change the color of the grid on mouseover
+// Function who change the color (in black) of the grid on mouseover
 function mouseover () {
     for (let i = 1; i < ((numberOfRows**2)+1); i++) {
         const allGrid = document.querySelector(`#grid${i}`);
         allGrid.addEventListener('mouseenter', () => {
+            randomRBG();
             allGrid.style.cssText = `height : ${16 / numberOfRows}cm; width : ${16 / numberOfRows}cm; outline : 1px solid; display: flex; align-content: center;\
-            justify-content: center; align-items: center; background-color : black;`;
-
+            justify-content: center; align-items: center; background-color : ${randomColor};`;
+            
     })
 }};
+
+// Function who generate random RBG color
+
+function randomRBG () {
+    let randomNum1 = Math.floor((Math.random() * 255));
+    let randomNum2 = Math.floor((Math.random() * 255));
+    let randomNum3 = Math.floor((Math.random() * 255));
+    randomColor =`rgb(${randomNum1}, ${randomNum2}, ${randomNum3})`;
+}
 
 
 showGrid(numberOfRows);
 chooseRow();
 mouseover();
+
