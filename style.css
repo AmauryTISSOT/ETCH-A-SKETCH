@@ -2,14 +2,70 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: lightcoral;
+  justify-content: center;
+  background-color: rgb(129, 217, 161);
 }
 
 button {
-  margin: 30px;
   font-size: 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid black;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgrey;
 }
 
 .container {
   background-color: white;
+}
+
+.frame {
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
+  position: relative;
+  z-index: 0;
+  background-color: rgb(233, 4, 24);
+  padding: 90px;
+  border-radius: 5%;
+}
+
+.row-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+.color-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+.reset-button {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0%;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+#footer {
+  margin-top: 20px;
+  font-family: monospace;
+  font-size: 17px;
+  color: black;
+  text-decoration: none;
+}
+
+#footer i {
+  color: black;
 }
