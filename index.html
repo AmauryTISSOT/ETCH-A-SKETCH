@@ -6,10 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ETCH-A-SKETCH</title>
     <link rel="stylesheet" href="style.css" />
+    <!--Fontawesome import-->
+    <script
+      src="https://kit.fontawesome.com/d1d6edd90f.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js" defer></script>
   </head>
   <body>
-    <button>Click here to choose the number of rows</button>
-    <div class="container"></div>
+    <div class="frame">
+      <button class="row-button" id="select-row">Number of rows</button>
+      <button class="color-button" id="select-color">Random color</button>
+      <button class="reset-button" id="reset-btn">Reset</button>
+      <div class="container"></div>
+    </div>
+    <div id="footer">
+      <span>Built & designed by Amaury Tissot | </span>
+      <a href="https://github.com/AmauryTISSOT/ETCH-A-SKETCH" target="_blank"
+        ><i class="fab fa-github fa-2x"></i
+      ></a>
+    </div>
   </body>
 </html>
